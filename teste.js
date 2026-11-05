@@ -62,3 +62,14 @@ function mostrarMedia() {
   document.getElementById("media").textContent =
     notas.length > 0 ? `Média: ${media.toFixed(2)}` : "";
 }
+function limparHistorico() {
+  // 1. Esvazia a lista de notas (reseta a gaveta de dados)
+  notas = [];
+  
+  // 2. Atualiza a tela para sumir com as notas da lista
+  atualizarListaNotas();
+  
+  // 3. Volta os textos de resultado ao estado original
+  document.getElementById("result").textContent = "adicione para começar";
+  document.getElementById("media").textContent = "";
+}

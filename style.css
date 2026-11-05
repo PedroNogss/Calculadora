@@ -1,126 +1,128 @@
-
-/* Configurações gerais */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(135deg, #667eea, #764ba2);
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    color: #333;
+  background-color: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
 }
 
-/* Título principal */
+.container {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
 h1 {
-    color: white;
-    font-size: 32px;
-    margin-bottom: 25px;
-    text-align: center;
+  text-align: center;
+  color: #333;
+  font-size: 1.6rem;
 }
 
-/* Subtítulos */
-h2 {
-    font-size: 21px;
-    margin-top: 25px;
-    margin-bottom: 12px;
-    color: #444;
+.quadrado {
+  background-color: #ffffff;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
-/* Área de entrada da nota */
-label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-    color: #555;
+.quadrado h2 {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #edf2f7;
+  padding-bottom: 6px;
 }
 
-input {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 16px;
-    outline: none;
-    transition: border-color 0.3s, box-shadow 0.3s;
+.quadrado label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #4b5563;
+  margin-bottom: 8px;
 }
 
-input:focus {
-    border-color: #667eea;
-    box-shadow: 0 0 5px rgba(102, 126, 234, 0.5);
+.input-box {
+  display: flex;
+  gap: 8px;
 }
 
-/* Botões */
+input[type="number"] {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+}
+
+input[type="number"]:focus {
+  border-color: #2563eb;
+}
+
 button {
-    padding: 12px 20px;
-    margin-top: 15px;
-    margin-right: 5px;
-    border: none;
-    border-radius: 8px;
-    background-color: #667eea;
-    color: white;
-    font-size: 15px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
+  padding: 10px 16px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
 }
 
 button:hover {
-    background-color: #5265c9;
-    transform: translateY(-2px);
+  background-color: #1d4ed8;
 }
 
-button:active {
-    transform: scale(0.97);
+#listaNotas {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-height: 120px;
+  overflow-y: auto;
 }
 
-/* Lista de notas */
-ul {
-    list-style: none;
-    margin-top: 10px;
+#listaNotas li {
+  background-color: #eff6ff;
+  color: #1d4ed8;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  border: 1px solid #bfdbfe;
 }
 
-li {
-    background-color: #f1f3ff;
-    padding: 12px;
-    margin-bottom: 8px;
-    border-radius: 8px;
-    border-left: 4px solid #667eea;
-    font-size: 16px;
+.btn-media {
+  width: 100%;
+  background-color: #16a34a;
+  margin-bottom: 12px;
 }
 
-/* Mensagens e resultado */
-p {
-    margin-top: 15px;
-    line-height: 1.5;
-    font-size: 16px;
+.btn-media:hover {
+  background-color: #15803d;
 }
 
 #result {
-    color: #666;
+  font-size: 0.95rem;
+  color: #374151;
+  font-weight: 600;
+  margin-bottom: 4px;
 }
 
 #media {
-    font-size: 20px;
-    font-weight: bold;
-    color: #667eea;
-}
-
-/* Layout responsivo */
-@media (max-width: 480px) {
-    h1 {
-        font-size: 26px;
-    }
-
-    button {
-        padding: 10px 14px;
-        font-size: 14px;
-    }
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #16a34a;
 }
